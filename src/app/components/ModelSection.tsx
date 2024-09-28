@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 
 interface ModelYProps {
   title: string;
-  subtitle: string;
+  subtitle?: string | null;
   bgImage: string;
   leftButton: string;
   rightButton?: string;
@@ -27,14 +27,12 @@ export default function ModelY(props:ModelYProps) {
             className=" text-sm rounded font-medium text-white px-[60px] py-[9px] inline-block bg-gray-900
             " 
             href="/"
-            >{leftButton}</a
-            >
+            >{leftButton}</a>
            { rightButton && (
             <a 
             className=" text-sm rounded font-medium text-black  py-[9px] px-[60px] inline-block bg-white" 
             href="/"
-            >{rightButton}</a
-            >
+            >{rightButton}</a>
            )
            }
             </div>
